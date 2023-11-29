@@ -7,6 +7,11 @@ from routers import get_name
 app = FastAPI()
 
 
+@app.get("/")
+def root():
+    return "Welcome to my name game API! use the /docs endpoint to see the docs"
+
+
 # origins = settings.BACKEND_CORS_ORIGINS
 
 
