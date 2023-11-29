@@ -1,0 +1,4 @@
+NAME=NameGame
+API_ENDPOINT=http://localhost:8000
+BACKEND_CORS_ORIGINS=["http://localhost:3000", "https://localhost:3000"]
+
