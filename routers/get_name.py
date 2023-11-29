@@ -11,8 +11,8 @@ router = fastapi.APIRouter()
 
 
 efternamn = pd.read_csv("data/efternamn.csv")
-förnamn_kvinnor = pd.read_csv("data/Förnamn_kvinnor.csv")
-förnamn_män = pd.read_csv("data/Förnamn_män.csv")
+förnamn_kvinnor = pd.read_csv("data/förnamn_kvinnor.csv")
+förnamn_män = pd.read_csv("data/förnamn_män.csv")
 tilltalsnamn_kvinnor = pd.read_csv("data/tilltalsnamn_kvinnor.csv")
 tilltalsnamn_män = pd.read_csv("data/tilltalsnamn_män.csv")
 
