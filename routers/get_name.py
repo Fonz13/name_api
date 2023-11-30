@@ -1,15 +1,11 @@
 import fastapi
-import time
 from pydantic import BaseModel
-from typing import Optional
-import time
-import re
 import pandas as pd
 
 # Set up router
 router = fastapi.APIRouter()
 
-
+# load data
 efternamn = pd.read_csv("data/efternamn.csv")
 förnamn_kvinnor = pd.read_csv("data/förnamn_kvinnor.csv")
 förnamn_män = pd.read_csv("data/förnamn_män.csv")
@@ -30,7 +26,18 @@ class QueryResult(BaseModel):
 
 
 @router.get("/search_name/")
-def search_name(name: str):
+def search_name(name: str) -> QueryResult:
+    """
+    Search for a name in the database and return the number of people with that name.
+
+    Input:
+        name (str): The name to search for.
+
+    Output:
+        result_json (JSON): A JSON structure with the number of people with that name.
+    """
+
+    # Clean input. Make sure first letter is capitalized and remove whitespace.
     name = name.upper().strip()
 
     num_efternamn = efternamn.query(f"Efternamn=='{name}'")["Antal bärare"]
