@@ -22,7 +22,7 @@ def call_self() -> None:
     Server will go down after 15 minutes of inactivity.
     """
     x = requests.get(
-        "https://name-game-hdxh.onrender.com/search_name/", params={"name": "linus"}
+        "https://name-game-hdxh.onrender.com/search_name/", params={"name": "self-call"}
     )
 
 
