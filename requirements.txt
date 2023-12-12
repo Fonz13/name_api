@@ -2,3 +2,5 @@ fastapi==0.96.1
 python-dotenv==0.21.1
 uvicorn
 pandas
+fastapi-utils
+requests
