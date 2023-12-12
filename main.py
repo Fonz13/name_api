@@ -18,7 +18,7 @@ def root():
 @repeat_every(seconds=60)  # 1 minute
 def remove_expired_tokens_task() -> None:
     x = requests.get(
-        "https://name-game-hdxh.onrender.com/search_name/", params={"name": "Fonzie"}
+        "https://name-game-hdxh.onrender.com/search_name/", params={"name": "linus"}
     )
     print(x.text)
 
