@@ -13,18 +13,16 @@ app = FastAPI()
 def root():
     return "Welcome to my name game API! use the /docs endpoint to see the docs"
 
-
+"""
 @app.on_event("startup")
 @repeat_every(seconds=60 * 10)  # 10 minute
 def call_self() -> None:
-    """
-    Call self to keep the server awake.
-    Server will go down after 15 minutes of inactivity.
-    """
+    #Call self to keep the server awake.
+    #Server will go down after 15 minutes of inactivity.
     x = requests.get(
         "https://name-game-hdxh.onrender.com/search_name/", params={"name": "self-call"}
     )
-
+"""
 
 app.include_router(get_name.router)
 
